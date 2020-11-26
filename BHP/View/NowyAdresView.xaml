@@ -1,0 +1,59 @@
+﻿<local:JedenViewBase x:Class="BHP.View.NowyAdresView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BHP.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary Source="MainWindowResources.xaml"/>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" Style="{StaticResource StackPanelZwykly}">
+            <Border Style="{StaticResource BorderAzurowy}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0"> Miejscowość</Label>
+                <Label Grid.Row="1"> Nr Domu</Label>
+                <Label Grid.Row="2">Nr Lokalu</Label>
+                <Label Grid.Row="3">Ulica</Label>
+                <Label Grid.Row="4">Kod Pocztowy</Label>
+                <Label Grid.Row="5"> Poczta</Label>
+            </Grid>
+         </Border>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Style="{StaticResource StackPanelZwykly}">
+            <Border Style="{StaticResource BorderAzurowy}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                    </Grid.RowDefinitions>
+                    <TextBox Grid.Row="0" Text="{Binding Miejscowosc}"/>
+                    <TextBox Grid.Row="1" Text="{Binding NrDomu}"/>
+                    <TextBox Grid.Row="2" Text="{Binding NrLokalu}"/>
+                    <TextBox Grid.Row="3" Text="{Binding Ulica}"/>
+                    <TextBox Grid.Row="4" Text="{Binding KodPocztowy}"/>
+                    <TextBox Grid.Row="5" Text="{Binding Poczta}"/>
+                </Grid>
+            </Border>
+        </StackPanel>
+    </Grid>
+</local:JedenViewBase>

@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BHPModelStoreContainer" CdmEntityContainer="BHPEntities2">
+    <EntitySetMapping Name="EwidencjaPracownika">
+      <EntityTypeMapping TypeName="BHPModel.EwidencjaPracownika">
+        <MappingFragment StoreEntitySet="EwidencjaPracownika">
+          <ScalarProperty Name="IdPracownika" ColumnName="IdPracownika" />
+          <ScalarProperty Name="IdStanowiska" ColumnName="IdStanowiska" />
+          <ScalarProperty Name="IdFirmy" ColumnName="IdFirmy" />
+          <ScalarProperty Name="IdWydzilu" ColumnName="IdWydzilu" />
+          <ScalarProperty Name="IdOdziezy" ColumnName="IdOdziezy" />
+          <ScalarProperty Name="IdObowia" ColumnName="IdObowia" />
+          <ScalarProperty Name="IdRozmaru" ColumnName="IdRozmaru" />
+          <ScalarProperty Name="IdFirmyPioracej" ColumnName="IdFirmyPioracej" />
+          <ScalarProperty Name="CzyZdane" ColumnName="CzyZdane" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FirmaPioracaTS">
+      <EntityTypeMapping TypeName="BHPModel.FirmaPioracaTS">
+        <MappingFragment StoreEntitySet="FirmaPioracaTS">
+          <ScalarProperty Name="czyAktywny" ColumnName="czyAktywny" />
+          <ScalarProperty Name="IdFirmyPioracej" ColumnName="IdFirmyPioracej" />
+          <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+          <ScalarProperty Name="Kod" ColumnName="Kod" />
+          <ScalarProperty Name="DataUtworzenia" ColumnName="DataUtworzenia" />
+          <ScalarProperty Name="DataModyfikacji" ColumnName="DataModyfikacji" />
+          <ScalarProperty Name="DataUsuniecia" ColumnName="DataUsuniecia" />
+          <ScalarProperty Name="KtoUtorzyl" ColumnName="KtoUtorzyl" />
+          <ScalarProperty Name="KtoZmodyfikowal" ColumnName="KtoZmodyfikowal" />
+          <ScalarProperty Name="KtoUsunal" ColumnName="KtoUsunal" />
+          <ScalarProperty Name="IdOperatora" ColumnName="IdOperatora" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FirmaTS">
+      <EntityTypeMapping TypeName="BHPModel.FirmaTS">
+        <MappingFragment StoreEntitySet="FirmaTS">
+          <ScalarProperty Name="czyAktywny" ColumnName="czyAktywny" />
+          <ScalarProperty Name="IdFirmy" ColumnName="IdFirmy" />
+          <ScalarProperty Name="NazwaFirmy" ColumnName="NazwaFirmy" />
+          <ScalarProperty Name="KodFirmy" ColumnName="KodFirmy" />
+          <ScalarProperty Name="DataUtworzenia" ColumnName="DataUtworzenia" />
+          <ScalarProperty Name="DataModyfikacji" ColumnName="DataModyfikacji" />
+          <ScalarProperty Name="DataUsuniecia" ColumnName="DataUsuniecia" />
+          <ScalarProperty Name="KtoUtworzyl" ColumnName="KtoUtworzyl" />
+          <ScalarProperty Name="KtoZmodyfikowal" ColumnName="KtoZmodyfikowal" />
+          <ScalarProperty Name="KtoUsunal" ColumnName="KtoUsunal" />
+          <ScalarProperty Name="IdOperatora" ColumnName="IdOperatora" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HistoriaOperacji">
+      <EntityTypeMapping TypeName="BHPModel.HistoriaOperacji">
+        <MappingFragment StoreEntitySet="HistoriaOperacji">
+          <ScalarProperty Name="IdOperacji" ColumnName="IdOperacji" />
+          <ScalarProperty Name="Kod_NrOperacji" ColumnName="Kod/NrOperacji" />
+          <ScalarProperty Name="RodzajOperacji" ColumnName="RodzajOperacji" />
+          <ScalarProperty Name="IdOperatora" ColumnName="IdOperatora" />
+          <ScalarProperty Name="DataUtorzenia" ColumnName="DataUtorzenia" />
+          <ScalarProperty Name="DataModyfikacji" ColumnName="DataModyfikacji" />
+          <ScalarProperty Name="DataUsuniecia" ColumnName="DataUsuniecia" />
+          <ScalarProperty Name="KtoUtorzyl" ColumnName="KtoUtorzyl" />
+          <ScalarProperty Name="KtoZmodyfikowal" ColumnName="KtoZmodyfikowal" />
+          <ScalarProperty Name="KtoUsunal" ColumnName="KtoUsunal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Obowie">
+      <EntityTypeMapping TypeName="BHPModel.Obowie">
+        <MappingFragment StoreEntitySet="Obowie">
+          <ScalarProperty Name="CzyAktywny" ColumnName="CzyAktywny" />
+          <ScalarProperty Name="IdObowia" ColumnName="IdObowia" />
+          <ScalarProperty Name="NazwaObowia" ColumnName="NazwaObowia" />
+          <ScalarProperty Name="IdRozmiaru" ColumnName="IdRozmiaru" />
+          <ScalarProperty Name="DataUtworzenia" ColumnName="DataUtworzenia" />
+          <ScalarProperty Name="DataModyfikacji" ColumnName="DataModyfikacji" />
+          <ScalarProperty Name="DataUsuniecia" ColumnName="DataUsuniecia" />
+          <ScalarProperty Name="KtoUtorzyl" ColumnName="KtoUtorzyl" />
+          <ScalarProperty Name="KtoZmodyfikowal" ColumnName="KtoZmodyfikowal" />
+          <ScalarProperty Name="KtoUsunal" ColumnName="KtoUsunal" />
+          <ScalarProperty Name="IdOperatora" ColumnName="IdOperatora" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Odziez">
+      <EntityTypeMapping TypeName="BHPModel.Odziez">
+        <MappingFragment StoreEntitySet="Odziez">
+          <ScalarProperty Name="Rozmiar" ColumnName="Rozmiar" />
+          <ScalarProperty Name="idKategori" ColumnName="idKategori" />
+          <ScalarProperty Name="NazwaOdziezy" ColumnName="NazwaOdziezy" />
+          <ScalarProperty Name="czyAktywny" ColumnName="czyAktywny" />
+          <ScalarProperty Name="IdOdziezy" ColumnName="IdOdziezy" />
+          <ScalarProperty Name="DataUtworzenia" ColumnName="DataUtworzenia" />
+          <ScalarProperty Name="DataModyfikacji" ColumnName="DataModyfikacji" />
+          <ScalarProperty Name="DataUsuniecia" ColumnName="DataUsuniecia" />
+          <ScalarProperty Name="KtoUtorzyl" ColumnName="KtoUtorzyl" />
+          <ScalarProperty Name="KtoZmodyfikowal" ColumnName="KtoZmodyfikowal" />
+          <ScalarProperty Name="KtoUsunal" ColumnName="KtoUsunal" />
+          <ScalarProperty Name="IdOperatora" ColumnName="IdOperatora" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OkresUzywalnosciTS">
+      <EntityTypeMapping TypeName="BHPModel.OkresUzywalnosciTS">
+        <MappingFragment StoreEntitySet="OkresUzywalnosciTS">
+          <ScalarProperty Name="IdOkresuUzywalnosci" ColumnName="IdOkresuUzywalnosci" />
+          <ScalarProperty Name="DataUzywalnosci" ColumnName="DataUzywalnosci" />
+          <ScalarProperty Name="DoZuzycia" ColumnName="DoZuzycia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OperatorzyTS">
+      <EntityTypeMapping TypeName="BHPModel.OperatorzyTS">
+        <MappingFragment StoreEntitySet="OperatorzyTS">
+          <ScalarProperty Name="IdOperatora" ColumnName="IdOperatora" />
+          <ScalarProperty Name="KodOperatora" ColumnName="KodOperatora" />
+          <ScalarProperty Name="Imie" ColumnName="Imie" />
+          <ScalarProperty Name="Nazwisko" ColumnName="Nazwisko" />
+          <ScalarProperty Name="DataUtworzenia" ColumnName="DataUtworzenia" />
+          <ScalarProperty Name="DataUsuniecia" ColumnName="DataUsuniecia" />
+          <ScalarProperty Name="KtoUtworzyl" ColumnName="KtoUtworzyl" />
+          <ScalarProperty Name="KtoUsunal" ColumnName="KtoUsunal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pracownicy">
+      <EntityTypeMapping TypeName="BHPModel.Pracownicy">
+        <MappingFragment StoreEntitySet="Pracownicy">
+          <ScalarProperty Name="IdObowia" ColumnName="IdObowia" />
+          <ScalarProperty Name="IdOdziezy" ColumnName="IdOdziezy" />
+          <ScalarProperty Name="czyZwolniony" ColumnName="czyZwolniony" />
+          <ScalarProperty Name="IdPracownika" ColumnName="IdPracownika" />
+          <ScalarProperty Name="Imie" ColumnName="Imie" />
+          <ScalarProperty Name="Nazwisko" ColumnName="Nazwisko" />
+          <ScalarProperty Name="Stanowisko" ColumnName="Stanowisko" />
+          <ScalarProperty Name="IdWydzial" ColumnName="IdWydzial" />
+          <ScalarProperty Name="IdFirmy" ColumnName="IdFirmy" />
+          <ScalarProperty Name="tech1" ColumnName="tech1" />
+          <ScalarProperty Name="idOperatora" ColumnName="idOperatora" />
+          <ScalarProperty Name="DataUtorzenia" ColumnName="DataUtorzenia" />
+          <ScalarProperty Name="DataModyfikacji" ColumnName="DataModyfikacji" />
+          <ScalarProperty Name="DataZatrudnienia" ColumnName="DataZatrudnienia" />
+          <ScalarProperty Name="DataUsuniecia" ColumnName="DataUsuniecia" />
+          <ScalarProperty Name="DataZwolnienia" ColumnName="DataZwolnienia" />
+          <ScalarProperty Name="KtoUtworzyl" ColumnName="KtoUtworzyl" />
+          <ScalarProperty Name="KtoZmodyfikowal" ColumnName="KtoZmodyfikowal" />
+          <ScalarProperty Name="KtoUsunal" ColumnName="KtoUsunal" />
+          <ScalarProperty Name="czyZatrudniony" ColumnName="czyZatrudniony" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rozmiary">
+      <EntityTypeMapping TypeName="BHPModel.Rozmiary">
+        <MappingFragment StoreEntitySet="Rozmiary">
+          <ScalarProperty Name="IdRozmiaru" ColumnName="IdRozmiaru" />
+          <ScalarProperty Name="Rozmary" ColumnName="Rozmary" />
+          <ScalarProperty Name="JednostaMiary" ColumnName="JednostaMiary" />
+          <ScalarProperty Name="IdJednostkiMiary" ColumnName="IdJednostkiMiary" />
+          <ScalarProperty Name="DataUtorzenia" ColumnName="DataUtorzenia" />
+          <ScalarProperty Name="DataModyfikacji" ColumnName="DataModyfikacji" />
+          <ScalarProperty Name="DataUsuniecia" ColumnName="DataUsuniecia" />
+          <ScalarProperty Name="KtoUtorzyl" ColumnName="KtoUtorzyl" />
+          <ScalarProperty Name="KtoZmodyfikowal" ColumnName="KtoZmodyfikowal" />
+          <ScalarProperty Name="KtoUsunal" ColumnName="KtoUsunal" />
+          <ScalarProperty Name="IdOperatora" ColumnName="IdOperatora" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StanowiskoTS">
+      <EntityTypeMapping TypeName="BHPModel.StanowiskoTS">
+        <MappingFragment StoreEntitySet="StanowiskoTS">
+          <ScalarProperty Name="IdStanowiska" ColumnName="IdStanowiska" />
+          <ScalarProperty Name="NazwaStanowiska" ColumnName="NazwaStanowiska" />
+          <ScalarProperty Name="DataUtworzenia" ColumnName="DataUtworzenia" />
+          <ScalarProperty Name="DataModyfikacji" ColumnName="DataModyfikacji" />
+          <ScalarProperty Name="DataUsuniecia" ColumnName="DataUsuniecia" />
+          <ScalarProperty Name="IdOperatora" ColumnName="IdOperatora" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypKategoriObowia">
+      <EntityTypeMapping TypeName="BHPModel.TypKategoriObowia">
+        <MappingFragment StoreEntitySet="TypKategoriObowia">
+          <ScalarProperty Name="IdKategoriObowia" ColumnName="IdKategoriObowia" />
+          <ScalarProperty Name="IdKategori" ColumnName="IdKategori" />
+          <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+          <ScalarProperty Name="Opis" ColumnName="Opis" />
+          <ScalarProperty Name="DataUtworzenia" ColumnName="DataUtworzenia" />
+          <ScalarProperty Name="DataModyfikacji" ColumnName="DataModyfikacji" />
+          <ScalarProperty Name="DataUsuniecia" ColumnName="DataUsuniecia" />
+          <ScalarProperty Name="KtoUtworzyl" ColumnName="KtoUtworzyl" />
+          <ScalarProperty Name="KtoZmodyfikowal" ColumnName="KtoZmodyfikowal" />
+          <ScalarProperty Name="KtoUsunal" ColumnName="KtoUsunal" />
+          <ScalarProperty Name="IdOperatora" ColumnName="IdOperatora" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypKategoriTS">
+      <EntityTypeMapping TypeName="BHPModel.TypKategoriTS">
+        <MappingFragment StoreEntitySet="TypKategoriTS">
+          <ScalarProperty Name="IdKategori" ColumnName="IdKategori" />
+          <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+          <ScalarProperty Name="Opis" ColumnName="Opis" />
+          <ScalarProperty Name="DataUtorzenia" ColumnName="DataUtorzenia" />
+          <ScalarProperty Name="DataModyfikcji" ColumnName="DataModyfikcji" />
+          <ScalarProperty Name="DataUsuniecia" ColumnName="DataUsuniecia" />
+          <ScalarProperty Name="KtoUtorzyl" ColumnName="KtoUtorzyl" />
+          <ScalarProperty Name="KtoZmodyfikowal" ColumnName="KtoZmodyfikowal" />
+          <ScalarProperty Name="KtoUsunal" ColumnName="KtoUsunal" />
+          <ScalarProperty Name="idOperatora" ColumnName="idOperatora" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WydzialyTS">
+      <EntityTypeMapping TypeName="BHPModel.WydzialyTS">
+        <MappingFragment StoreEntitySet="WydzialyTS">
+          <ScalarProperty Name="IdWydzialu" ColumnName="IdWydzialu" />
+          <ScalarProperty Name="NazwaWydzialu" ColumnName="NazwaWydzialu" />
+          <ScalarProperty Name="KodWydzialu" ColumnName="KodWydzialu" />
+          <ScalarProperty Name="DataUtworzenia" ColumnName="DataUtworzenia" />
+          <ScalarProperty Name="DataModyfikacji" ColumnName="DataModyfikacji" />
+          <ScalarProperty Name="DataUsuniecia" ColumnName="DataUsuniecia" />
+          <ScalarProperty Name="IdOperatora" ColumnName="IdOperatora" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Adresy">
+      <EntityTypeMapping TypeName="BHPModel.Adresy">
+        <MappingFragment StoreEntitySet="Adresy">
+          <ScalarProperty Name="Poczta" ColumnName="Poczta" />
+          <ScalarProperty Name="KodPocztowy" ColumnName="KodPocztowy" />
+          <ScalarProperty Name="Ulica" ColumnName="Ulica" />
+          <ScalarProperty Name="NrLokalu" ColumnName="NrLokalu" />
+          <ScalarProperty Name="NrDomu" ColumnName="NrDomu" />
+          <ScalarProperty Name="Miejscowosc" ColumnName="Miejscowosc" />
+          <ScalarProperty Name="IdAdresu" ColumnName="IdAdresu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kontrahenci">
+      <EntityTypeMapping TypeName="BHPModel.Kontrahenci">
+        <MappingFragment StoreEntitySet="Kontrahenci">
+          <ScalarProperty Name="czyAktywny" ColumnName="czyAktywny" />
+          <ScalarProperty Name="IdAdresu" ColumnName="IdAdresu" />
+          <ScalarProperty Name="IdStatusu" ColumnName="IdStatusu" />
+          <ScalarProperty Name="IdRodzaju" ColumnName="IdRodzaju" />
+          <ScalarProperty Name="NIP" ColumnName="NIP" />
+          <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+          <ScalarProperty Name="Kod" ColumnName="Kod" />
+          <ScalarProperty Name="IdKontrahenta" ColumnName="IdKontrahenta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PozycjeFaktury">
+      <EntityTypeMapping TypeName="BHPModel.PozycjeFaktury">
+        <MappingFragment StoreEntitySet="PozycjeFaktury">
+          <ScalarProperty Name="Rabat" ColumnName="Rabat" />
+          <ScalarProperty Name="Ilosc" ColumnName="Ilosc" />
+          <ScalarProperty Name="Cena" ColumnName="Cena" />
+          <ScalarProperty Name="IdTowaru" ColumnName="IdTowaru" />
+          <ScalarProperty Name="IdFaktury" ColumnName="IdFaktury" />
+          <ScalarProperty Name="IdPozycjiFaktury" ColumnName="IdPozycjiFaktury" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rodzaje">
+      <EntityTypeMapping TypeName="BHPModel.Rodzaje">
+        <MappingFragment StoreEntitySet="Rodzaje">
+          <ScalarProperty Name="Opis" ColumnName="Opis" />
+          <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+          <ScalarProperty Name="IdRodzaju" ColumnName="IdRodzaju" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SposobyPlatnosci">
+      <EntityTypeMapping TypeName="BHPModel.SposobyPlatnosci">
+        <MappingFragment StoreEntitySet="SposobyPlatnosci">
+          <ScalarProperty Name="Opis" ColumnName="Opis" />
+          <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+          <ScalarProperty Name="IdSposobuPlatnosci" ColumnName="IdSposobuPlatnosci" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Statusy">
+      <EntityTypeMapping TypeName="BHPModel.Statusy">
+        <MappingFragment StoreEntitySet="Statusy">
+          <ScalarProperty Name="Opis" ColumnName="Opis" />
+          <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+          <ScalarProperty Name="IdStatusu" ColumnName="IdStatusu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Towary">
+      <EntityTypeMapping TypeName="BHPModel.Towary">
+        <MappingFragment StoreEntitySet="Towary">
+          <ScalarProperty Name="Cena" ColumnName="Cena" />
+          <ScalarProperty Name="StawkaVatZakupu" ColumnName="StawkaVatZakupu" />
+          <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+          <ScalarProperty Name="Kod" ColumnName="Kod" />
+          <ScalarProperty Name="IdTowaru" ColumnName="IdTowaru" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Faktury">
+      <EntityTypeMapping TypeName="BHPModel.Faktury">
+        <MappingFragment StoreEntitySet="Faktury">
+          <ScalarProperty Name="IdSposobuPlatnosci" ColumnName="IdSposobuPlatnosci" />
+          <ScalarProperty Name="TerminPlatnosci" ColumnName="TerminPlatnosci" />
+          <ScalarProperty Name="IdKontrahenta" ColumnName="IdKontrahenta" />
+          <ScalarProperty Name="DataWystawienia" ColumnName="DataWystawienia" />
+          <ScalarProperty Name="Numer" ColumnName="Numer" />
+          <ScalarProperty Name="IdFaktury" ColumnName="IdFaktury" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Zwolnienia">
+      <EntityTypeMapping TypeName="BHPModel.Zwolnienia">
+        <MappingFragment StoreEntitySet="Zwolnienia">
+          <ScalarProperty Name="PrzyczynaZwolnienia" ColumnName="PrzyczynaZwolnienia" />
+          <ScalarProperty Name="idFirmy" ColumnName="idFirmy" />
+          <ScalarProperty Name="idStanowiska" ColumnName="idStanowiska" />
+          <ScalarProperty Name="DataZatrudnienia" ColumnName="DataZatrudnienia" />
+          <ScalarProperty Name="DataZwolnienia" ColumnName="DataZwolnienia" />
+          <ScalarProperty Name="Nazwisko" ColumnName="Nazwisko" />
+          <ScalarProperty Name="Imie" ColumnName="Imie" />
+          <ScalarProperty Name="idZwolnienia" ColumnName="idZwolnienia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pozycje">
+      <EntityTypeMapping TypeName="BHPModel.Pozycje">
+        <MappingFragment StoreEntitySet="Pozycje">
+          <ScalarProperty Name="Ilosc" ColumnName="Ilosc" />
+          <ScalarProperty Name="IdOziezy" ColumnName="IdOziezy" />
+          <ScalarProperty Name="IdObowia" ColumnName="IdObowia" />
+          <ScalarProperty Name="IdPracownika" ColumnName="IdPracownika" />
+          <ScalarProperty Name="IdPozycji" ColumnName="IdPozycji" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

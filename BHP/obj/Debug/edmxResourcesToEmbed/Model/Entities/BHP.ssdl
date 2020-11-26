@@ -1,0 +1,901 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BHPModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Adresy">
+    <Key>
+      <PropertyRef Name="IdAdresu" />
+    </Key>
+    <Property Name="IdAdresu" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Miejscowosc" Type="nvarchar" MaxLength="50" />
+    <Property Name="NrDomu" Type="nvarchar" MaxLength="50" />
+    <Property Name="NrLokalu" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ulica" Type="nvarchar" MaxLength="50" />
+    <Property Name="KodPocztowy" Type="nvarchar" MaxLength="10" />
+    <Property Name="Poczta" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="EwidencjaPracownika">
+    <Key>
+      <PropertyRef Name="IdPracownika" />
+    </Key>
+    <Property Name="IdPracownika" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdStanowiska" Type="bigint" />
+    <Property Name="IdFirmy" Type="bigint" />
+    <Property Name="IdWydzilu" Type="bigint" />
+    <Property Name="IdOdziezy" Type="bigint" />
+    <Property Name="IdObowia" Type="bigint" />
+    <Property Name="IdRozmaru" Type="bigint" />
+    <Property Name="IdFirmyPioracej" Type="bigint" />
+    <Property Name="CzyZdane" Type="bit" />
+  </EntityType>
+  <EntityType Name="Faktury">
+    <Key>
+      <PropertyRef Name="IdFaktury" />
+    </Key>
+    <Property Name="IdFaktury" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Numer" Type="nvarchar" MaxLength="50" />
+    <Property Name="DataWystawienia" Type="datetime" />
+    <Property Name="IdKontrahenta" Type="int" />
+    <Property Name="TerminPlatnosci" Type="datetime" Nullable="false" />
+    <Property Name="IdSposobuPlatnosci" Type="int" />
+  </EntityType>
+  <EntityType Name="FirmaPioracaTS">
+    <Key>
+      <PropertyRef Name="IdFirmyPioracej" />
+    </Key>
+    <Property Name="IdFirmyPioracej" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nazwa" Type="nvarchar" MaxLength="50" />
+    <Property Name="Kod" Type="nvarchar" MaxLength="50" />
+    <Property Name="DataUtworzenia" Type="date" />
+    <Property Name="DataModyfikacji" Type="date" />
+    <Property Name="DataUsuniecia" Type="date" />
+    <Property Name="KtoUtorzyl" Type="nvarchar" MaxLength="50" />
+    <Property Name="KtoZmodyfikowal" Type="nvarchar" MaxLength="50" />
+    <Property Name="KtoUsunal" Type="nvarchar" MaxLength="50" />
+    <Property Name="IdOperatora" Type="int" />
+    <Property Name="czyAktywny" Type="bit" />
+  </EntityType>
+  <EntityType Name="FirmaTS">
+    <Key>
+      <PropertyRef Name="IdFirmy" />
+    </Key>
+    <Property Name="IdFirmy" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NazwaFirmy" Type="nvarchar" MaxLength="50" />
+    <Property Name="KodFirmy" Type="nchar" MaxLength="10" />
+    <Property Name="DataUtworzenia" Type="date" />
+    <Property Name="DataModyfikacji" Type="date" />
+    <Property Name="DataUsuniecia" Type="date" />
+    <Property Name="KtoUtworzyl" Type="nvarchar" MaxLength="50" />
+    <Property Name="KtoZmodyfikowal" Type="nvarchar" MaxLength="50" />
+    <Property Name="KtoUsunal" Type="nvarchar" MaxLength="50" />
+    <Property Name="IdOperatora" Type="int" />
+    <Property Name="czyAktywny" Type="bit" />
+  </EntityType>
+  <EntityType Name="HistoriaOperacji">
+    <Key>
+      <PropertyRef Name="IdOperacji" />
+    </Key>
+    <Property Name="IdOperacji" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Kod/NrOperacji" Type="nvarchar" MaxLength="50" />
+    <Property Name="RodzajOperacji" Type="nvarchar" MaxLength="50" />
+    <Property Name="IdOperatora" Type="int" />
+    <Property Name="DataUtorzenia" Type="date" />
+    <Property Name="DataModyfikacji" Type="date" />
+    <Property Name="DataUsuniecia" Type="date" />
+    <Property Name="KtoUtorzyl" Type="nvarchar" MaxLength="50" />
+    <Property Name="KtoZmodyfikowal" Type="nvarchar" MaxLength="50" />
+    <Property Name="KtoUsunal" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Kontrahenci">
+    <Key>
+      <PropertyRef Name="IdKontrahenta" />
+    </Key>
+    <Property Name="IdKontrahenta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Kod" Type="nvarchar" MaxLength="50" />
+    <Property Name="Nazwa" Type="nvarchar" MaxLength="50" />
+    <Property Name="NIP" Type="nvarchar" MaxLength="50" />
+    <Property Name="IdRodzaju" Type="int" />
+    <Property Name="IdStatusu" Type="int" />
+    <Property Name="IdAdresu" Type="int" />
+    <Property Name="czyAktywny" Type="bit" />
+  </EntityType>
+  <EntityType Name="Obowie">
+    <Key>
+      <PropertyRef Name="IdObowia" />
+    </Key>
+    <Property Name="IdObowia" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NazwaObowia" Type="nvarchar" MaxLength="50" />
+    <Property Name="IdRozmiaru" Type="bigint" />
+    <Property Name="DataUtworzenia" Type="date" />
+    <Property Name="DataModyfikacji" Type="date" />
+    <Property Name="DataUsuniecia" Type="date" />
+    <Property Name="KtoUtorzyl" Type="nvarchar" MaxLength="50" />
+    <Property Name="KtoZmodyfikowal" Type="nvarchar" MaxLength="50" />
+    <Property Name="KtoUsunal" Type="nvarchar" MaxLength="50" />
+    <Property Name="IdOperatora" Type="int" />
+    <Property Name="CzyAktywny" Type="bit" />
+    <Property Name="Rozmiar" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Odziez">
+    <Key>
+      <PropertyRef Name="IdOdziezy" />
+    </Key>
+    <Property Name="IdOdziezy" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idKategori" Type="bigint" />
+    <Property Name="DataUtworzenia" Type="date" />
+    <Property Name="DataModyfikacji" Type="date" />
+    <Property Name="DataUsuniecia" Type="date" />
+    <Property Name="KtoUtorzyl" Type="date" />
+    <Property Name="KtoZmodyfikowal" Type="date" />
+    <Property Name="KtoUsunal" Type="date" />
+    <Property Name="IdOperatora" Type="int" />
+    <Property Name="czyAktywny" Type="bit" />
+    <Property Name="NazwaOdziezy" Type="nvarchar" MaxLength="50" />
+    <Property Name="Rozmiar" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="OkresUzywalnosciTS">
+    <Key>
+      <PropertyRef Name="IdOkresuUzywalnosci" />
+    </Key>
+    <Property Name="IdOkresuUzywalnosci" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DataUzywalnosci" Type="date" />
+    <Property Name="DoZuzycia" Type="date" />
+  </EntityType>
+  <EntityType Name="OperatorzyTS">
+    <Key>
+      <PropertyRef Name="IdOperatora" />
+    </Key>
+    <Property Name="IdOperatora" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KodOperatora" Type="nchar" MaxLength="10" />
+    <Property Name="Imie" Type="nchar" MaxLength="10" />
+    <Property Name="Nazwisko" Type="nchar" MaxLength="10" />
+    <Property Name="DataUtworzenia" Type="date" />
+    <Property Name="DataUsuniecia" Type="date" />
+    <Property Name="KtoUtworzyl" Type="nchar" MaxLength="10" />
+    <Property Name="KtoUsunal" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Pozycje">
+    <Key>
+      <PropertyRef Name="IdPozycji" />
+    </Key>
+    <Property Name="IdPozycji" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdPracownika" Type="bigint" />
+    <Property Name="IdObowia" Type="bigint" />
+    <Property Name="IdOziezy" Type="bigint" />
+    <Property Name="IloscObowia" Type="int" />
+    <Property Name="IloscOdziezy" Type="int" />
+  </EntityType>
+  <EntityType Name="PozycjeFaktury">
+    <Key>
+      <PropertyRef Name="IdPozycjiFaktury" />
+    </Key>
+    <Property Name="IdPozycjiFaktury" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdFaktury" Type="int" />
+    <Property Name="IdTowaru" Type="int" />
+    <Property Name="Cena" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Ilosc" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Rabat" Type="decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="Pracownicy">
+    <Key>
+      <PropertyRef Name="IdPracownika" />
+    </Key>
+    <Property Name="IdPracownika" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Imie" Type="nvarchar" MaxLength="50" />
+    <Property Name="Nazwisko" Type="nvarchar" MaxLength="50" />
+    <Property Name="Stanowisko" Type="bigint" />
+    <Property Name="IdWydzial" Type="bigint" />
+    <Property Name="IdFirmy" Type="bigint" />
+    <Property Name="tech1" Type="nchar" MaxLength="10" />
+    <Property Name="idOperatora" Type="int" />
+    <Property Name="DataUtorzenia" Type="date" />
+    <Property Name="DataModyfikacji" Type="date" />
+    <Property Name="DataZatrudnienia" Type="date" />
+    <Property Name="DataUsuniecia" Type="date" />
+    <Property Name="DataZwolnienia" Type="date" />
+    <Property Name="KtoUtworzyl" Type="nvarchar" MaxLength="50" />
+    <Property Name="KtoZmodyfikowal" Type="nvarchar" MaxLength="50" />
+    <Property Name="KtoUsunal" Type="nvarchar" MaxLength="50" />
+    <Property Name="czyZatrudniony" Type="bit" />
+    <Property Name="czyZwolniony" Type="bit" />
+    <Property Name="IdOdziezy" Type="int" />
+    <Property Name="IdObowia" Type="int" />
+  </EntityType>
+  <EntityType Name="Rodzaje">
+    <Key>
+      <PropertyRef Name="IdRodzaju" />
+    </Key>
+    <Property Name="IdRodzaju" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nazwa" Type="nvarchar" MaxLength="50" />
+    <Property Name="Opis" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Rozmiary">
+    <Key>
+      <PropertyRef Name="IdRozmiaru" />
+    </Key>
+    <Property Name="IdRozmiaru" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Rozmary" Type="nvarchar" MaxLength="50" />
+    <Property Name="JednostaMiary" Type="nvarchar" MaxLength="50" />
+    <Property Name="IdJednostkiMiary" Type="bigint" />
+    <Property Name="DataUtorzenia" Type="date" />
+    <Property Name="DataModyfikacji" Type="date" />
+    <Property Name="DataUsuniecia" Type="date" />
+    <Property Name="KtoUtorzyl" Type="nvarchar" MaxLength="50" />
+    <Property Name="KtoZmodyfikowal" Type="nvarchar" MaxLength="50" />
+    <Property Name="KtoUsunal" Type="nvarchar" MaxLength="50" />
+    <Property Name="IdOperatora" Type="int" />
+  </EntityType>
+  <EntityType Name="SposobyPlatnosci">
+    <Key>
+      <PropertyRef Name="IdSposobuPlatnosci" />
+    </Key>
+    <Property Name="IdSposobuPlatnosci" Type="int" Nullable="false" />
+    <Property Name="Nazwa" Type="nvarchar" MaxLength="50" />
+    <Property Name="Opis" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="StanowiskoTS">
+    <Key>
+      <PropertyRef Name="IdStanowiska" />
+    </Key>
+    <Property Name="IdStanowiska" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NazwaStanowiska" Type="nvarchar" MaxLength="50" />
+    <Property Name="DataUtworzenia" Type="date" />
+    <Property Name="DataModyfikacji" Type="date" />
+    <Property Name="DataUsuniecia" Type="date" />
+    <Property Name="IdOperatora" Type="int" />
+  </EntityType>
+  <EntityType Name="Statusy">
+    <Key>
+      <PropertyRef Name="IdStatusu" />
+    </Key>
+    <Property Name="IdStatusu" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nazwa" Type="nvarchar" MaxLength="50" />
+    <Property Name="Opis" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Towary">
+    <Key>
+      <PropertyRef Name="IdTowaru" />
+    </Key>
+    <Property Name="IdTowaru" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Kod" Type="nvarchar" MaxLength="50" />
+    <Property Name="Nazwa" Type="nvarchar" MaxLength="50" />
+    <Property Name="StawkaVatZakupu" Type="int" />
+    <Property Name="Cena" Type="decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="TypKategoriObowia">
+    <Key>
+      <PropertyRef Name="IdKategoriObowia" />
+    </Key>
+    <Property Name="IdKategoriObowia" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdKategori" Type="bigint" />
+    <Property Name="Nazwa" Type="nvarchar" MaxLength="50" />
+    <Property Name="Opis" Type="nvarchar" MaxLength="50" />
+    <Property Name="DataUtworzenia" Type="date" />
+    <Property Name="DataModyfikacji" Type="date" />
+    <Property Name="DataUsuniecia" Type="date" />
+    <Property Name="KtoUtworzyl" Type="nvarchar" MaxLength="50" />
+    <Property Name="KtoZmodyfikowal" Type="nvarchar" MaxLength="50" />
+    <Property Name="KtoUsunal" Type="nvarchar" MaxLength="50" />
+    <Property Name="IdOperatora" Type="int" />
+  </EntityType>
+  <EntityType Name="TypKategoriTS">
+    <Key>
+      <PropertyRef Name="IdKategori" />
+    </Key>
+    <Property Name="IdKategori" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nazwa" Type="nvarchar" MaxLength="50" />
+    <Property Name="Opis" Type="nvarchar" MaxLength="50" />
+    <Property Name="DataUtorzenia" Type="date" />
+    <Property Name="DataModyfikcji" Type="date" />
+    <Property Name="DataUsuniecia" Type="date" />
+    <Property Name="KtoUtorzyl" Type="nvarchar" MaxLength="50" />
+    <Property Name="KtoZmodyfikowal" Type="nvarchar" MaxLength="50" />
+    <Property Name="KtoUsunal" Type="nvarchar" MaxLength="50" />
+    <Property Name="idOperatora" Type="int" />
+  </EntityType>
+  <EntityType Name="WydzialyTS">
+    <Key>
+      <PropertyRef Name="IdWydzialu" />
+    </Key>
+    <Property Name="IdWydzialu" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NazwaWydzialu" Type="nvarchar" MaxLength="50" />
+    <Property Name="KodWydzialu" Type="nchar" MaxLength="10" />
+    <Property Name="DataUtworzenia" Type="date" />
+    <Property Name="DataModyfikacji" Type="date" />
+    <Property Name="DataUsuniecia" Type="date" />
+    <Property Name="IdOperatora" Type="int" />
+  </EntityType>
+  <EntityType Name="Zwolnienia">
+    <Key>
+      <PropertyRef Name="idZwolnienia" />
+    </Key>
+    <Property Name="idZwolnienia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Imie" Type="nvarchar" MaxLength="50" />
+    <Property Name="Nazwisko" Type="nvarchar" MaxLength="50" />
+    <Property Name="DataZwolnienia" Type="date" />
+    <Property Name="DataZatrudnienia" Type="date" />
+    <Property Name="idStanowiska" Type="bigint" />
+    <Property Name="idFirmy" Type="bigint" />
+    <Property Name="PrzyczynaZwolnienia" Type="nvarchar" MaxLength="50" />
+    <Property Name="czyAktywny" Type="bit" />
+  </EntityType>
+  <Association Name="FK_EwidencjaPracownika_FirmaPioracaTS">
+    <End Role="FirmaPioracaTS" Type="Self.FirmaPioracaTS" Multiplicity="0..1" />
+    <End Role="EwidencjaPracownika" Type="Self.EwidencjaPracownika" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FirmaPioracaTS">
+        <PropertyRef Name="IdFirmyPioracej" />
+      </Principal>
+      <Dependent Role="EwidencjaPracownika">
+        <PropertyRef Name="IdFirmyPioracej" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EwidencjaPracownika_FirmaTS">
+    <End Role="FirmaTS" Type="Self.FirmaTS" Multiplicity="0..1" />
+    <End Role="EwidencjaPracownika" Type="Self.EwidencjaPracownika" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FirmaTS">
+        <PropertyRef Name="IdFirmy" />
+      </Principal>
+      <Dependent Role="EwidencjaPracownika">
+        <PropertyRef Name="IdFirmy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EwidencjaPracownika_Obowie">
+    <End Role="Obowie" Type="Self.Obowie" Multiplicity="0..1" />
+    <End Role="EwidencjaPracownika" Type="Self.EwidencjaPracownika" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Obowie">
+        <PropertyRef Name="IdObowia" />
+      </Principal>
+      <Dependent Role="EwidencjaPracownika">
+        <PropertyRef Name="IdObowia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EwidencjaPracownika_Odziez">
+    <End Role="Odziez" Type="Self.Odziez" Multiplicity="0..1" />
+    <End Role="EwidencjaPracownika" Type="Self.EwidencjaPracownika" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Odziez">
+        <PropertyRef Name="IdOdziezy" />
+      </Principal>
+      <Dependent Role="EwidencjaPracownika">
+        <PropertyRef Name="IdOdziezy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EwidencjaPracownika_Pracownicy">
+    <End Role="Pracownicy" Type="Self.Pracownicy" Multiplicity="1" />
+    <End Role="EwidencjaPracownika" Type="Self.EwidencjaPracownika" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Pracownicy">
+        <PropertyRef Name="IdPracownika" />
+      </Principal>
+      <Dependent Role="EwidencjaPracownika">
+        <PropertyRef Name="IdPracownika" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EwidencjaPracownika_Rozmiary">
+    <End Role="Rozmiary" Type="Self.Rozmiary" Multiplicity="0..1" />
+    <End Role="EwidencjaPracownika" Type="Self.EwidencjaPracownika" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rozmiary">
+        <PropertyRef Name="IdRozmiaru" />
+      </Principal>
+      <Dependent Role="EwidencjaPracownika">
+        <PropertyRef Name="IdRozmaru" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EwidencjaPracownika_StanowiskoTS">
+    <End Role="StanowiskoTS" Type="Self.StanowiskoTS" Multiplicity="0..1" />
+    <End Role="EwidencjaPracownika" Type="Self.EwidencjaPracownika" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StanowiskoTS">
+        <PropertyRef Name="IdStanowiska" />
+      </Principal>
+      <Dependent Role="EwidencjaPracownika">
+        <PropertyRef Name="IdStanowiska" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EwidencjaPracownika_WydzialyTS">
+    <End Role="WydzialyTS" Type="Self.WydzialyTS" Multiplicity="0..1" />
+    <End Role="EwidencjaPracownika" Type="Self.EwidencjaPracownika" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WydzialyTS">
+        <PropertyRef Name="IdWydzialu" />
+      </Principal>
+      <Dependent Role="EwidencjaPracownika">
+        <PropertyRef Name="IdWydzilu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Faktury_Kontrahenci">
+    <End Role="Kontrahenci" Type="Self.Kontrahenci" Multiplicity="0..1" />
+    <End Role="Faktury" Type="Self.Faktury" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kontrahenci">
+        <PropertyRef Name="IdKontrahenta" />
+      </Principal>
+      <Dependent Role="Faktury">
+        <PropertyRef Name="IdKontrahenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Faktury_SposobyPlatnosci">
+    <End Role="SposobyPlatnosci" Type="Self.SposobyPlatnosci" Multiplicity="0..1" />
+    <End Role="Faktury" Type="Self.Faktury" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SposobyPlatnosci">
+        <PropertyRef Name="IdSposobuPlatnosci" />
+      </Principal>
+      <Dependent Role="Faktury">
+        <PropertyRef Name="IdSposobuPlatnosci" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FirmaPioracaTS_OperatorzyTS">
+    <End Role="OperatorzyTS" Type="Self.OperatorzyTS" Multiplicity="0..1" />
+    <End Role="FirmaPioracaTS" Type="Self.FirmaPioracaTS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperatorzyTS">
+        <PropertyRef Name="IdOperatora" />
+      </Principal>
+      <Dependent Role="FirmaPioracaTS">
+        <PropertyRef Name="IdOperatora" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FirmaPioracaTS_OperatorzyTS1">
+    <End Role="OperatorzyTS" Type="Self.OperatorzyTS" Multiplicity="0..1" />
+    <End Role="FirmaPioracaTS" Type="Self.FirmaPioracaTS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperatorzyTS">
+        <PropertyRef Name="IdOperatora" />
+      </Principal>
+      <Dependent Role="FirmaPioracaTS">
+        <PropertyRef Name="IdOperatora" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FirmaTS_OperatorzyTS">
+    <End Role="OperatorzyTS" Type="Self.OperatorzyTS" Multiplicity="0..1" />
+    <End Role="FirmaTS" Type="Self.FirmaTS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperatorzyTS">
+        <PropertyRef Name="IdOperatora" />
+      </Principal>
+      <Dependent Role="FirmaTS">
+        <PropertyRef Name="IdOperatora" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Kontrahenci_Adresy">
+    <End Role="Adresy" Type="Self.Adresy" Multiplicity="0..1" />
+    <End Role="Kontrahenci" Type="Self.Kontrahenci" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Adresy">
+        <PropertyRef Name="IdAdresu" />
+      </Principal>
+      <Dependent Role="Kontrahenci">
+        <PropertyRef Name="IdAdresu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Kontrahenci_Rodzaje">
+    <End Role="Rodzaje" Type="Self.Rodzaje" Multiplicity="0..1" />
+    <End Role="Kontrahenci" Type="Self.Kontrahenci" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rodzaje">
+        <PropertyRef Name="IdRodzaju" />
+      </Principal>
+      <Dependent Role="Kontrahenci">
+        <PropertyRef Name="IdRodzaju" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Kontrahenci_Statusy">
+    <End Role="Statusy" Type="Self.Statusy" Multiplicity="0..1" />
+    <End Role="Kontrahenci" Type="Self.Kontrahenci" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Statusy">
+        <PropertyRef Name="IdStatusu" />
+      </Principal>
+      <Dependent Role="Kontrahenci">
+        <PropertyRef Name="IdStatusu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Obowie_OperatorzyTS">
+    <End Role="OperatorzyTS" Type="Self.OperatorzyTS" Multiplicity="0..1" />
+    <End Role="Obowie" Type="Self.Obowie" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperatorzyTS">
+        <PropertyRef Name="IdOperatora" />
+      </Principal>
+      <Dependent Role="Obowie">
+        <PropertyRef Name="IdOperatora" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Obowie_Rozmiary">
+    <End Role="Rozmiary" Type="Self.Rozmiary" Multiplicity="0..1" />
+    <End Role="Obowie" Type="Self.Obowie" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rozmiary">
+        <PropertyRef Name="IdRozmiaru" />
+      </Principal>
+      <Dependent Role="Obowie">
+        <PropertyRef Name="IdRozmiaru" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Odziez_OperatorzyTS">
+    <End Role="OperatorzyTS" Type="Self.OperatorzyTS" Multiplicity="0..1" />
+    <End Role="Odziez" Type="Self.Odziez" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperatorzyTS">
+        <PropertyRef Name="IdOperatora" />
+      </Principal>
+      <Dependent Role="Odziez">
+        <PropertyRef Name="IdOperatora" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pozycje_Obowie">
+    <End Role="Obowie" Type="Self.Obowie" Multiplicity="0..1" />
+    <End Role="Pozycje" Type="Self.Pozycje" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Obowie">
+        <PropertyRef Name="IdObowia" />
+      </Principal>
+      <Dependent Role="Pozycje">
+        <PropertyRef Name="IdObowia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pozycje_Odziez">
+    <End Role="Odziez" Type="Self.Odziez" Multiplicity="0..1" />
+    <End Role="Pozycje" Type="Self.Pozycje" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Odziez">
+        <PropertyRef Name="IdOdziezy" />
+      </Principal>
+      <Dependent Role="Pozycje">
+        <PropertyRef Name="IdOziezy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pozycje_Pracownicy">
+    <End Role="Pracownicy" Type="Self.Pracownicy" Multiplicity="0..1" />
+    <End Role="Pozycje" Type="Self.Pozycje" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pracownicy">
+        <PropertyRef Name="IdPracownika" />
+      </Principal>
+      <Dependent Role="Pozycje">
+        <PropertyRef Name="IdPracownika" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PozycjeFaktury_Faktury">
+    <End Role="Faktury" Type="Self.Faktury" Multiplicity="0..1" />
+    <End Role="PozycjeFaktury" Type="Self.PozycjeFaktury" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Faktury">
+        <PropertyRef Name="IdFaktury" />
+      </Principal>
+      <Dependent Role="PozycjeFaktury">
+        <PropertyRef Name="IdFaktury" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PozycjeFaktury_Towary">
+    <End Role="Towary" Type="Self.Towary" Multiplicity="0..1" />
+    <End Role="PozycjeFaktury" Type="Self.PozycjeFaktury" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Towary">
+        <PropertyRef Name="IdTowaru" />
+      </Principal>
+      <Dependent Role="PozycjeFaktury">
+        <PropertyRef Name="IdTowaru" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pracownicy_FirmaTS">
+    <End Role="FirmaTS" Type="Self.FirmaTS" Multiplicity="0..1" />
+    <End Role="Pracownicy" Type="Self.Pracownicy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FirmaTS">
+        <PropertyRef Name="IdFirmy" />
+      </Principal>
+      <Dependent Role="Pracownicy">
+        <PropertyRef Name="IdFirmy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pracownicy_StanowiskoTS">
+    <End Role="StanowiskoTS" Type="Self.StanowiskoTS" Multiplicity="0..1" />
+    <End Role="Pracownicy" Type="Self.Pracownicy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StanowiskoTS">
+        <PropertyRef Name="IdStanowiska" />
+      </Principal>
+      <Dependent Role="Pracownicy">
+        <PropertyRef Name="Stanowisko" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rozmiary_OperatorzyTS">
+    <End Role="OperatorzyTS" Type="Self.OperatorzyTS" Multiplicity="0..1" />
+    <End Role="Rozmiary" Type="Self.Rozmiary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperatorzyTS">
+        <PropertyRef Name="IdOperatora" />
+      </Principal>
+      <Dependent Role="Rozmiary">
+        <PropertyRef Name="IdOperatora" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StanowiskoTS_OperatorzyTS">
+    <End Role="OperatorzyTS" Type="Self.OperatorzyTS" Multiplicity="0..1" />
+    <End Role="StanowiskoTS" Type="Self.StanowiskoTS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperatorzyTS">
+        <PropertyRef Name="IdOperatora" />
+      </Principal>
+      <Dependent Role="StanowiskoTS">
+        <PropertyRef Name="IdOperatora" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TypKategoriObowia_OperatorzyTS">
+    <End Role="OperatorzyTS" Type="Self.OperatorzyTS" Multiplicity="0..1" />
+    <End Role="TypKategoriObowia" Type="Self.TypKategoriObowia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperatorzyTS">
+        <PropertyRef Name="IdOperatora" />
+      </Principal>
+      <Dependent Role="TypKategoriObowia">
+        <PropertyRef Name="IdOperatora" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TypKategoriTS_OperatorzyTS">
+    <End Role="OperatorzyTS" Type="Self.OperatorzyTS" Multiplicity="0..1" />
+    <End Role="TypKategoriTS" Type="Self.TypKategoriTS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperatorzyTS">
+        <PropertyRef Name="IdOperatora" />
+      </Principal>
+      <Dependent Role="TypKategoriTS">
+        <PropertyRef Name="idOperatora" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TypKategoriTS_OperatorzyTS1">
+    <End Role="OperatorzyTS" Type="Self.OperatorzyTS" Multiplicity="0..1" />
+    <End Role="TypKategoriTS" Type="Self.TypKategoriTS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperatorzyTS">
+        <PropertyRef Name="IdOperatora" />
+      </Principal>
+      <Dependent Role="TypKategoriTS">
+        <PropertyRef Name="idOperatora" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WydzialyTS_OperatorzyTS">
+    <End Role="OperatorzyTS" Type="Self.OperatorzyTS" Multiplicity="0..1" />
+    <End Role="WydzialyTS" Type="Self.WydzialyTS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperatorzyTS">
+        <PropertyRef Name="IdOperatora" />
+      </Principal>
+      <Dependent Role="WydzialyTS">
+        <PropertyRef Name="IdOperatora" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Zwolnienia_FirmaTS1">
+    <End Role="FirmaTS" Type="Self.FirmaTS" Multiplicity="0..1" />
+    <End Role="Zwolnienia" Type="Self.Zwolnienia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FirmaTS">
+        <PropertyRef Name="IdFirmy" />
+      </Principal>
+      <Dependent Role="Zwolnienia">
+        <PropertyRef Name="idFirmy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Zwolnienia_StanowiskoTS1">
+    <End Role="StanowiskoTS" Type="Self.StanowiskoTS" Multiplicity="0..1" />
+    <End Role="Zwolnienia" Type="Self.Zwolnienia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StanowiskoTS">
+        <PropertyRef Name="IdStanowiska" />
+      </Principal>
+      <Dependent Role="Zwolnienia">
+        <PropertyRef Name="idStanowiska" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BHPModelStoreContainer">
+    <EntitySet Name="Adresy" EntityType="Self.Adresy" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EwidencjaPracownika" EntityType="Self.EwidencjaPracownika" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Faktury" EntityType="Self.Faktury" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FirmaPioracaTS" EntityType="Self.FirmaPioracaTS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FirmaTS" EntityType="Self.FirmaTS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HistoriaOperacji" EntityType="Self.HistoriaOperacji" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Kontrahenci" EntityType="Self.Kontrahenci" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Obowie" EntityType="Self.Obowie" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Odziez" EntityType="Self.Odziez" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OkresUzywalnosciTS" EntityType="Self.OkresUzywalnosciTS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OperatorzyTS" EntityType="Self.OperatorzyTS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Pozycje" EntityType="Self.Pozycje" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PozycjeFaktury" EntityType="Self.PozycjeFaktury" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Pracownicy" EntityType="Self.Pracownicy" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Rodzaje" EntityType="Self.Rodzaje" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Rozmiary" EntityType="Self.Rozmiary" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SposobyPlatnosci" EntityType="Self.SposobyPlatnosci" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StanowiskoTS" EntityType="Self.StanowiskoTS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Statusy" EntityType="Self.Statusy" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Towary" EntityType="Self.Towary" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TypKategoriObowia" EntityType="Self.TypKategoriObowia" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TypKategoriTS" EntityType="Self.TypKategoriTS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WydzialyTS" EntityType="Self.WydzialyTS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Zwolnienia" EntityType="Self.Zwolnienia" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_EwidencjaPracownika_FirmaPioracaTS" Association="Self.FK_EwidencjaPracownika_FirmaPioracaTS">
+      <End Role="FirmaPioracaTS" EntitySet="FirmaPioracaTS" />
+      <End Role="EwidencjaPracownika" EntitySet="EwidencjaPracownika" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EwidencjaPracownika_FirmaTS" Association="Self.FK_EwidencjaPracownika_FirmaTS">
+      <End Role="FirmaTS" EntitySet="FirmaTS" />
+      <End Role="EwidencjaPracownika" EntitySet="EwidencjaPracownika" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EwidencjaPracownika_Obowie" Association="Self.FK_EwidencjaPracownika_Obowie">
+      <End Role="Obowie" EntitySet="Obowie" />
+      <End Role="EwidencjaPracownika" EntitySet="EwidencjaPracownika" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EwidencjaPracownika_Odziez" Association="Self.FK_EwidencjaPracownika_Odziez">
+      <End Role="Odziez" EntitySet="Odziez" />
+      <End Role="EwidencjaPracownika" EntitySet="EwidencjaPracownika" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EwidencjaPracownika_Pracownicy" Association="Self.FK_EwidencjaPracownika_Pracownicy">
+      <End Role="Pracownicy" EntitySet="Pracownicy" />
+      <End Role="EwidencjaPracownika" EntitySet="EwidencjaPracownika" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EwidencjaPracownika_Rozmiary" Association="Self.FK_EwidencjaPracownika_Rozmiary">
+      <End Role="Rozmiary" EntitySet="Rozmiary" />
+      <End Role="EwidencjaPracownika" EntitySet="EwidencjaPracownika" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EwidencjaPracownika_StanowiskoTS" Association="Self.FK_EwidencjaPracownika_StanowiskoTS">
+      <End Role="StanowiskoTS" EntitySet="StanowiskoTS" />
+      <End Role="EwidencjaPracownika" EntitySet="EwidencjaPracownika" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EwidencjaPracownika_WydzialyTS" Association="Self.FK_EwidencjaPracownika_WydzialyTS">
+      <End Role="WydzialyTS" EntitySet="WydzialyTS" />
+      <End Role="EwidencjaPracownika" EntitySet="EwidencjaPracownika" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Faktury_Kontrahenci" Association="Self.FK_Faktury_Kontrahenci">
+      <End Role="Kontrahenci" EntitySet="Kontrahenci" />
+      <End Role="Faktury" EntitySet="Faktury" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Faktury_SposobyPlatnosci" Association="Self.FK_Faktury_SposobyPlatnosci">
+      <End Role="SposobyPlatnosci" EntitySet="SposobyPlatnosci" />
+      <End Role="Faktury" EntitySet="Faktury" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FirmaPioracaTS_OperatorzyTS" Association="Self.FK_FirmaPioracaTS_OperatorzyTS">
+      <End Role="OperatorzyTS" EntitySet="OperatorzyTS" />
+      <End Role="FirmaPioracaTS" EntitySet="FirmaPioracaTS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FirmaPioracaTS_OperatorzyTS1" Association="Self.FK_FirmaPioracaTS_OperatorzyTS1">
+      <End Role="OperatorzyTS" EntitySet="OperatorzyTS" />
+      <End Role="FirmaPioracaTS" EntitySet="FirmaPioracaTS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FirmaTS_OperatorzyTS" Association="Self.FK_FirmaTS_OperatorzyTS">
+      <End Role="OperatorzyTS" EntitySet="OperatorzyTS" />
+      <End Role="FirmaTS" EntitySet="FirmaTS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Kontrahenci_Adresy" Association="Self.FK_Kontrahenci_Adresy">
+      <End Role="Adresy" EntitySet="Adresy" />
+      <End Role="Kontrahenci" EntitySet="Kontrahenci" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Kontrahenci_Rodzaje" Association="Self.FK_Kontrahenci_Rodzaje">
+      <End Role="Rodzaje" EntitySet="Rodzaje" />
+      <End Role="Kontrahenci" EntitySet="Kontrahenci" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Kontrahenci_Statusy" Association="Self.FK_Kontrahenci_Statusy">
+      <End Role="Statusy" EntitySet="Statusy" />
+      <End Role="Kontrahenci" EntitySet="Kontrahenci" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Obowie_OperatorzyTS" Association="Self.FK_Obowie_OperatorzyTS">
+      <End Role="OperatorzyTS" EntitySet="OperatorzyTS" />
+      <End Role="Obowie" EntitySet="Obowie" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Obowie_Rozmiary" Association="Self.FK_Obowie_Rozmiary">
+      <End Role="Rozmiary" EntitySet="Rozmiary" />
+      <End Role="Obowie" EntitySet="Obowie" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Odziez_OperatorzyTS" Association="Self.FK_Odziez_OperatorzyTS">
+      <End Role="OperatorzyTS" EntitySet="OperatorzyTS" />
+      <End Role="Odziez" EntitySet="Odziez" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pozycje_Obowie" Association="Self.FK_Pozycje_Obowie">
+      <End Role="Obowie" EntitySet="Obowie" />
+      <End Role="Pozycje" EntitySet="Pozycje" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pozycje_Odziez" Association="Self.FK_Pozycje_Odziez">
+      <End Role="Odziez" EntitySet="Odziez" />
+      <End Role="Pozycje" EntitySet="Pozycje" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pozycje_Pracownicy" Association="Self.FK_Pozycje_Pracownicy">
+      <End Role="Pracownicy" EntitySet="Pracownicy" />
+      <End Role="Pozycje" EntitySet="Pozycje" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PozycjeFaktury_Faktury" Association="Self.FK_PozycjeFaktury_Faktury">
+      <End Role="Faktury" EntitySet="Faktury" />
+      <End Role="PozycjeFaktury" EntitySet="PozycjeFaktury" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PozycjeFaktury_Towary" Association="Self.FK_PozycjeFaktury_Towary">
+      <End Role="Towary" EntitySet="Towary" />
+      <End Role="PozycjeFaktury" EntitySet="PozycjeFaktury" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pracownicy_FirmaTS" Association="Self.FK_Pracownicy_FirmaTS">
+      <End Role="FirmaTS" EntitySet="FirmaTS" />
+      <End Role="Pracownicy" EntitySet="Pracownicy" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pracownicy_StanowiskoTS" Association="Self.FK_Pracownicy_StanowiskoTS">
+      <End Role="StanowiskoTS" EntitySet="StanowiskoTS" />
+      <End Role="Pracownicy" EntitySet="Pracownicy" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rozmiary_OperatorzyTS" Association="Self.FK_Rozmiary_OperatorzyTS">
+      <End Role="OperatorzyTS" EntitySet="OperatorzyTS" />
+      <End Role="Rozmiary" EntitySet="Rozmiary" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StanowiskoTS_OperatorzyTS" Association="Self.FK_StanowiskoTS_OperatorzyTS">
+      <End Role="OperatorzyTS" EntitySet="OperatorzyTS" />
+      <End Role="StanowiskoTS" EntitySet="StanowiskoTS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TypKategoriObowia_OperatorzyTS" Association="Self.FK_TypKategoriObowia_OperatorzyTS">
+      <End Role="OperatorzyTS" EntitySet="OperatorzyTS" />
+      <End Role="TypKategoriObowia" EntitySet="TypKategoriObowia" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TypKategoriTS_OperatorzyTS" Association="Self.FK_TypKategoriTS_OperatorzyTS">
+      <End Role="OperatorzyTS" EntitySet="OperatorzyTS" />
+      <End Role="TypKategoriTS" EntitySet="TypKategoriTS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TypKategoriTS_OperatorzyTS1" Association="Self.FK_TypKategoriTS_OperatorzyTS1">
+      <End Role="OperatorzyTS" EntitySet="OperatorzyTS" />
+      <End Role="TypKategoriTS" EntitySet="TypKategoriTS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WydzialyTS_OperatorzyTS" Association="Self.FK_WydzialyTS_OperatorzyTS">
+      <End Role="OperatorzyTS" EntitySet="OperatorzyTS" />
+      <End Role="WydzialyTS" EntitySet="WydzialyTS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Zwolnienia_FirmaTS1" Association="Self.FK_Zwolnienia_FirmaTS1">
+      <End Role="FirmaTS" EntitySet="FirmaTS" />
+      <End Role="Zwolnienia" EntitySet="Zwolnienia" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Zwolnienia_StanowiskoTS1" Association="Self.FK_Zwolnienia_StanowiskoTS1">
+      <End Role="StanowiskoTS" EntitySet="StanowiskoTS" />
+      <End Role="Zwolnienia" EntitySet="Zwolnienia" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

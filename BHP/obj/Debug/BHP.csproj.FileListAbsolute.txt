@@ -1,0 +1,156 @@
+C:\Users\Mirek\Desktop\BHP\BHP\bin\Debug\BHP.exe.config
+C:\Users\Mirek\Desktop\BHP\BHP\bin\Debug\BHP.exe
+C:\Users\Mirek\Desktop\BHP\BHP\bin\Debug\BHP.pdb
+C:\Users\Mirek\Desktop\BHP\BHP\obj\Debug\BHP.csprojAssemblyReference.cache
+C:\Users\Mirek\Desktop\BHP\BHP\obj\Debug\View\MainWindow.g.cs
+C:\Users\Mirek\Desktop\BHP\BHP\obj\Debug\App.g.cs
+C:\Users\Mirek\Desktop\BHP\BHP\obj\Debug\BHP_MarkupCompile.cache
+C:\Users\Mirek\Desktop\BHP\BHP\obj\Debug\BHP_MarkupCompile.lref
+C:\Users\Mirek\Desktop\BHP\BHP\obj\Debug\View\MainWindow.baml
+C:\Users\Mirek\Desktop\BHP\BHP\obj\Debug\BHP.g.resources
+C:\Users\Mirek\Desktop\BHP\BHP\obj\Debug\BHP.Properties.Resources.resources
+C:\Users\Mirek\Desktop\BHP\BHP\obj\Debug\BHP.csproj.GenerateResource.cache
+C:\Users\Mirek\Desktop\BHP\BHP\obj\Debug\BHP.csproj.CoreCompileInputs.cache
+C:\Users\Mirek\Desktop\BHP\BHP\obj\Debug\BHP.exe
+C:\Users\Mirek\Desktop\BHP\BHP\obj\Debug\BHP.pdb
+C:\Users\Mirek\Desktop\BHP\BHP\obj\Debug\View\MainWindowResources.baml
+C:\Users\Mirek\Desktop\BHP\BHP\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Mirek\Desktop\BHP\BHP\obj\Debug\View\WszyscyPracownicyView.g.cs
+C:\Users\Mirek\Desktop\BHP\BHP\obj\Debug\View\WszyscyPracownicyView.baml
+C:\Users\Mirek\Desktop\BHP\BHP\bin\Debug\EntityFramework.dll
+C:\Users\Mirek\Desktop\BHP\BHP\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Mirek\Desktop\BHP\BHP\bin\Debug\EntityFramework.xml
+C:\Users\Mirek\Desktop\BHP\BHP\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Mirek\Desktop\BHP\BHP\obj\Debug\BHP_Content.g.cs
+C:\Users\Mirek\Desktop\BHP\BHP\obj\Debug\BHP.csproj.CopyComplete
+C:\Users\Mirek\Desktop\BHP\BHP\obj\Debug\View\ZwolnieniView.g.cs
+C:\Users\Mirek\Desktop\BHP\BHP\obj\Debug\View\ZwolnieniView.baml
+C:\Users\Mirek\Desktop\BHP\BHP\obj\Debug\View\NowaOdziezView.g.cs
+C:\Users\Mirek\Desktop\BHP\BHP\obj\Debug\View\WszystkieObowiaView.g.cs
+C:\Users\Mirek\Desktop\BHP\BHP\obj\Debug\View\WszystkieUbraniaView.g.cs
+C:\Users\Mirek\Desktop\BHP\BHP\obj\Debug\View\NowaOdziezView.baml
+C:\Users\Mirek\Desktop\BHP\BHP\obj\Debug\View\WszystkieObowiaView.baml
+C:\Users\Mirek\Desktop\BHP\BHP\obj\Debug\View\WszystkieUbraniaView.baml
+C:\Users\Mirek\Desktop\BHP\BHP\obj\Debug\View\NoweObowieView.g.cs
+C:\Users\Mirek\Desktop\BHP\BHP\obj\Debug\View\NoweObowieView.baml
+C:\Users\Mirek\Desktop\BHP\BHP\obj\Debug\View\NowaFirmaView.g.cs
+C:\Users\Mirek\Desktop\BHP\BHP\obj\Debug\View\NoweStanowiskoView.g.cs
+C:\Users\Mirek\Desktop\BHP\BHP\obj\Debug\View\NowyPracownikView.g.cs
+C:\Users\Mirek\Desktop\BHP\BHP\obj\Debug\View\NowaFirmaView.baml
+C:\Users\Mirek\Desktop\BHP\BHP\obj\Debug\View\NoweStanowiskoView.baml
+C:\Users\Mirek\Desktop\BHP\BHP\obj\Debug\View\NowyPracownikView.baml
+C:\Users\Mirek\Desktop\BHP\BHP\obj\Debug\View\NowyWydzialView.g.cs
+C:\Users\Mirek\Desktop\BHP\BHP\obj\Debug\View\NowyWydzialView.baml
+C:\Users\Mirek\Desktop\BHP\BHP\obj\Debug\View\NowyUzytkownik.g.cs
+C:\Users\Mirek\Desktop\BHP\BHP\obj\Debug\View\NowyUzytkownik.baml
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\obj\Debug\BHP.csprojAssemblyReference.cache
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\obj\Debug\View\MainWindow.g.cs
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\obj\Debug\View\NowaFirmaView.g.cs
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\obj\Debug\View\NoweStanowiskoView.g.cs
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\obj\Debug\View\NowyPracownikView.g.cs
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\obj\Debug\View\WszyscyPracownicyView.g.cs
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\obj\Debug\App.g.cs
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\obj\Debug\BHP_Content.g.cs
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\obj\Debug\BHP_MarkupCompile.cache
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\obj\Debug\BHP_MarkupCompile.lref
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\obj\Debug\View\MainWindow.baml
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\obj\Debug\View\MainWindowResources.baml
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\obj\Debug\View\NowaFirmaView.baml
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\obj\Debug\View\NoweStanowiskoView.baml
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\obj\Debug\View\NowyPracownikView.baml
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\obj\Debug\View\WszyscyPracownicyView.baml
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\obj\Debug\BHP.exe
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\obj\Debug\BHP.pdb
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\bin\Debug\BHP.exe.config
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\bin\Debug\BHP.exe
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\bin\Debug\BHP.pdb
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\bin\Debug\EntityFramework.dll
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\bin\Debug\EntityFramework.xml
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\obj\Debug\Themes\Generic.baml
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\obj\Debug\BHP.g.resources
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\obj\Debug\BHP.Properties.Resources.resources
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\obj\Debug\BHP.csproj.GenerateResource.cache
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\obj\Debug\BHP.csproj.CoreCompileInputs.cache
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\obj\Debug\BHP.csproj.CopyComplete
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\obj\Debug\View\WszyscyKontrahenciView.g.cs
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\obj\Debug\View\WszyscyKontrahenciView.baml
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\obj\Debug\View\NowyKontrahentView.g.cs
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\obj\Debug\View\NowyKontrahentView.baml
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\obj\Debug\View\NowaPozycjaView.g.cs
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\bin\Debug\CommonServiceLocator.dll
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\obj\Debug\View\NowaPozycjaView.baml
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\obj\Debug\View\WszyscyZwolnienView.g.cs
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\obj\Debug\View\WszyscyZwolnienView.baml
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\obj\Debug\View\ZwolnieniePracownikaView.g.cs
+C:\Users\Mirek\Desktop\BHP — kopia\BHP\obj\Debug\View\ZwolnieniePracownikaView.baml
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\bin\Debug\BHP.exe.config
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\bin\Debug\BHP.exe
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\bin\Debug\BHP.pdb
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\bin\Debug\CommonServiceLocator.dll
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\bin\Debug\EntityFramework.dll
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\bin\Debug\EntityFramework.xml
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\obj\Debug\View\MainWindow.g.cs
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\obj\Debug\View\NowaFirmaView.g.cs
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\obj\Debug\View\NowaPozycjaView.g.cs
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\obj\Debug\View\NoweStanowiskoView.g.cs
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\obj\Debug\View\NowyKontrahentView.g.cs
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\obj\Debug\View\NowyPracownikView.g.cs
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\obj\Debug\View\WszyscyKontrahenciView.g.cs
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\obj\Debug\View\WszyscyPracownicyView.g.cs
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\obj\Debug\View\WszyscyZwolnienView.g.cs
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\obj\Debug\View\ZwolnieniePracownikaView.g.cs
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\obj\Debug\App.g.cs
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\obj\Debug\BHP_Content.g.cs
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\obj\Debug\BHP_MarkupCompile.cache
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\obj\Debug\BHP_MarkupCompile.lref
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\obj\Debug\Themes\Generic.baml
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\obj\Debug\View\MainWindow.baml
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\obj\Debug\View\MainWindowResources.baml
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\obj\Debug\View\NowaFirmaView.baml
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\obj\Debug\View\NowaPozycjaView.baml
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\obj\Debug\View\NoweStanowiskoView.baml
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\obj\Debug\View\NowyKontrahentView.baml
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\obj\Debug\View\NowyPracownikView.baml
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\obj\Debug\View\WszyscyKontrahenciView.baml
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\obj\Debug\View\WszyscyPracownicyView.baml
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\obj\Debug\View\WszyscyZwolnienView.baml
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\obj\Debug\View\ZwolnieniePracownikaView.baml
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\obj\Debug\BHP.g.resources
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\obj\Debug\BHP.Properties.Resources.resources
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\obj\Debug\BHP.csproj.GenerateResource.cache
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\obj\Debug\BHP.csproj.CopyComplete
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\obj\Debug\BHP.exe
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\obj\Debug\BHP.pdb
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\obj\Debug\View\NowaOdziezView.g.cs
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\obj\Debug\View\NowaOdziezView.baml
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\obj\Debug\View\NoweObowieView.g.cs
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\obj\Debug\View\NoweObowieView.baml
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\obj\Debug\App.baml
+C:\Users\Mirek\Desktop\BHP — kopiav2\BHP\obj\Debug\BHP.csprojAssemblyReference.cache
+C:\Users\mirek\Desktop\BHP — kopiav2\BHP\obj\Debug\BHP.csproj.CoreCompileInputs.cache

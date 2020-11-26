@@ -1,0 +1,22 @@
+﻿<local:WszystkieViewBase x:Class="BHP.View.WszyscyKontrahenciView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BHP.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary Source="MainWindowResources.xaml"/>
+    </UserControl.Resources>
+    <Grid >
+        <DataGrid  AutoGenerateColumns="False" ItemsSource="{Binding List}" 
+                           SelectedItem="{Binding Path=WybranyElement,Mode=TwoWay}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Nazwa Kontrahenta" Binding="{Binding Nazwa}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Kod" Binding="{Binding Kod}" ></DataGridTextColumn>
+                <DataGridTextColumn Header="Nip" Binding="{Binding NIP }"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</local:WszystkieViewBase>
